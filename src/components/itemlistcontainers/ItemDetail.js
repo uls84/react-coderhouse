@@ -1,5 +1,3 @@
-import '.ListContainer.css';
-
 const ItemDetail = ( {item}) => {
     return (
         <div className='fondo'>

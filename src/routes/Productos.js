@@ -1,10 +1,13 @@
-/*import Producto from '.././components/itemlistcontainers/List';
+import React from 'react';
+import ItemDetailContainer from '.././components/itemlistcontainers/ItemDetailContainer';
 
-const Productos = () => {
+/*const Productos = () => {
     return (
         Producto.map((prod) => (
     <div>
-        'Cerveza: {prod.nombre}'
+        <p>
+            `Cerveza: prod.nombre`
+            </p>
     </div>
     <div>
         {prod.categoria}
@@ -13,6 +16,12 @@ const Productos = () => {
         )
     )
 
+};*/
+
+const Productos = () => {
+return (
+    <ItemDetailContainer/>
+)
 };
 
-export default Productos;*/
+export default Productos;

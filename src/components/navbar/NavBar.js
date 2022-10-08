@@ -2,6 +2,7 @@ import React from "react";
 import CartWidget from "../cartwidget/CartWidget";
 import {Link} from "react-router-dom";   
 import Home from '../../routes/Home';
+import Detail from '../../routes/Detail';
 
 const NavBar = () => {
     return (
@@ -16,7 +17,8 @@ const NavBar = () => {
                 <Link to ={'/Productos'}>Productos</Link>
                     </li>
                     <li>
-                <Link to ={'/Nosotros'}>Nosotros</Link>
+                <Link to ={'/Detail'}>Detail</Link>
+                {/*<Link to ={'/Nosotros'}>Nosotros</Link>*/}
                     </li>
                     <li>
                         <Link to ={'/Carrito'}><CartWidget /></Link>
