@@ -52,7 +52,7 @@ const ItemListContainer = () => {
         const getData = new Promise(resolve => {
             setTimeout(() => {
                 resolve(Producto)
-            }, 3000)
+            }, 2000)
         });
     getData.then(res => setData(res));
 }, []);

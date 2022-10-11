@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
             setTimeout(() => {
                 console.log("Entre a la promesa")
                 resolve(Producto)
-            }, 3000)
+            }, 2000)
         });
 
         getData.then(res => setItem(res.find((prod) => prod.id === Number(id))));
