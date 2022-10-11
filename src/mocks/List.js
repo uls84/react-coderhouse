@@ -1,5 +1,5 @@
 const Producto = [
-    {id: 1, categoria: "rubia", nombre: "Kölsh", marca: "Antares", precio: 200, stock: 2, imgagen:'https://www.espaciovino.com.ar/media/default/0001/53/thumb_52828_default_big.jpeg'},
+    {id: 1, categoria: "rubia", nombre: "Kölsh", marca: "Antares", precio: 200, stock: 2, imgagen:'https://i1.wp.com/bodegaamparo.com.ar/tienda/wp-content/uploads/2020/05/antares-kolsch-500ml-avellaneda-D_NQ_NP_759420-MLA31608489174_072019-F.jpg?ssl=1'},
     {id: 2, categoria: "rubia", nombre: "Pilsner", marca: "Corona", precio: 300, stock: 5, imagen:'https://http2.mlstatic.com/D_NQ_NP_949162-MLA49582056061_042022-O.jpg'},
     {id: 3, categoria: "rubia", nombre: "Pilsner", marca: "Grolsch", precio: 300, stock: 2, imagen:'https://mefisto.com.ar/pub/media/catalog/product/cache/52333d95353fd30dc93141d4ad672a12/g/r/grolsch-45-cl_1.png'},
     {id: 4, categoria: "negra", nombre: "Porter", marca: "Guinness", precio: 200, stock: 2, imagen:'https://carrefourar.vtexassets.com/arquivos/ids/218408/7798339251509_02.jpg?v=637699226208300000'},

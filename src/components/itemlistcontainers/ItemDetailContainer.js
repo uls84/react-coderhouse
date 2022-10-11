@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import Producto from "./List";
+import Producto from "../../mocks/List";
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({})
@@ -21,8 +21,10 @@ const ItemDetailContainer = () => {
     return (
         <div className="text">
             <ItemDetail item={item} />
+            
+            <p>Precio: {item.precio} pesos.</p>
             <p>Id: {id}</p>
-            {/*<p>Precio: USD{item.precio}</p>*/}
+            <p>Categoria: {item.categoria}</p>
         </div>
     )
 }
