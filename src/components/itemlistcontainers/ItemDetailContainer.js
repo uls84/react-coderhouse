@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import Producto from "../../mocks/List";
+import Producto from "mocks/Products";
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({})
@@ -10,7 +10,6 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         const getData = new Promise(resolve => {
             setTimeout(() => {
-                console.log("Entre a la promesa")
                 resolve(Producto)
             }, 2000)
         });
@@ -21,10 +20,6 @@ const ItemDetailContainer = () => {
     return (
         <div className="text">
             <ItemDetail item={item} />
-            
-            <p>Precio: {item.precio} pesos.</p>
-            <p>Id: {id}</p>
-            <p>Categoria: {item.categoria}</p>
         </div>
     )
 }
