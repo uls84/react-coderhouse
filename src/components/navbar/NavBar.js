@@ -1,6 +1,7 @@
 import React from "react";
 import CartWidget from "../cartwidget/CartWidget";
 import { Link } from "react-router-dom";
+import './NavBar.css';
 
 //import { useStorePersist } from "store/context";
 
