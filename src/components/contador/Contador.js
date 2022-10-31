@@ -1,23 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './Contador.css';
 
 const Contador = ({ initial, stock, onAdd }) => {
-    const [Contador, setContador] = useState(initial);
+    const [cont, setContador] = useState(parseInt(initial));
 
     const Sumar = () => {
-        setContador(Contador + 1);
+        setContador(cont + 1);
     };
 
     const Restar = () => {
-        setContador(Contador - 1);
+        setContador(cont - 1);
     };
 
+    useEffect(() => {
+        setContador(parseInt(initial));
+    }, [initial]);
 
     return (
         <div className='Count'>
-            <button disabled={Contador <= 1} onClick={Restar}>-</button>
-            <span>{Contador}</span>
-            <button disabled={Contador >= stock} onClick={Sumar}>+</button>
+            <button disabled={cont <= 1} onClick={Restar}>-</button>
+            <span>{cont}</span>
+            <button disabled={cont >= stock} onClick={Sumar}>+</button>
             <div>
                 <button disabled={stock <= 0} onClick={() => onAdd(Contador)} >Agregar al carrito</button>
             </div>

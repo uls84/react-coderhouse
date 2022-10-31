@@ -1,29 +1,33 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import Producto from "mocks/Products";
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
 
-const ItemListContainer = ({categoryId}) => {
+const ItemListContainer = ({ categoryId }) => {
 
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        const getData = new Promise(resolve => {
-            setTimeout(() => {
-                resolve(Producto)
-            }, 2000)
-        });
-        if(categoryId) {
-            getData.then((res => setData(res.filter(prod => prod.categoria === categoryId))));
+        const db = getFirestore();
+        const itemsCollection = collection(db, 'items');
+
+        if (categoryId) {
+            const itemFilter = query(itemsCollection, where("categoria", "==", categoryId));
+            getDocs(itemFilter).then((res) =>
+                setData(res.docs.map((item =>
+                    (item.data())))))
         } else {
-            getData.then(res => setData(res));
+            getDocs(itemsCollection).then((res) =>
+                setData(res.docs.map((item =>
+                    (item.data())))))
         }
+
     }, [categoryId]);
 
 return (
-    <div>
-        <ItemList data={data} />
-    </div>
-)
+        <div>
+            <ItemList data={data} />
+        </div>
+    )
 }
 
 

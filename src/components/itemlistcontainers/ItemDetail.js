@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Contador from '../contador/Contador';
 
-const onAdd = (cantidad) => {
-    console.log(`${cantidad}`);
-}
 
 const ItemDetail = ( {item}) => {
+    const [goToCart, setGoToCart] = useState(false);
+
+    const onAdd = () => {
+        setGoToCart(true);
+    }
+
     return (
         <div className='fondo'>
             <p className='text'> Detalles de : {item.nombre}</p>
@@ -14,7 +17,11 @@ const ItemDetail = ( {item}) => {
             <p>Precio: {item.precio} pesos.</p>
             <p>Id: {item.id}</p>
             <p>Categoria: {item.categoria}</p>
-            <Contador initial={1} stock={item.stock} onAdd={onAdd}/>
+            {
+                goToCart
+                ? <Link to='/cart'> Terminar compra </Link>
+                : <Contador initial={1} stock={item.stock} onAdd={onAdd}/>
+            }
         </div>
     )
 };
