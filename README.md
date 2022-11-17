@@ -1,3 +1,12 @@
+# Ecommerce de tienda de bebidas
+
+Para este desafío creé 3 categorías (las 3 variedades de cerveza rubia,roja y negra)
+
+El usuario puede ver el total de los productos o directamente navegar por las categorías y que se les muestre solamente esa variedad.
+Una vez se agrega un producto al carrito se tiene la posibilidad de seguir navegando por la página e ir agregando productos o sino se puede finalizar la compra y ver los productos que hay en el carro y el total de la compra.
+Luego mediante un formulario se le piden los datos al usuario y una vez que de en finalizar la compra se le emite un ticket al usuario.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
