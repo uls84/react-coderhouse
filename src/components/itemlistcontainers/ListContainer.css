@@ -19,3 +19,7 @@
     font-style: oblique;
     text-decoration: underline;
 }
+
+button.btn.btn-outline-success {
+    margin-top: 25px;
+}

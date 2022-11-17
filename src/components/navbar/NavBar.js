@@ -3,19 +3,7 @@ import CartWidget from "../cartwidget/CartWidget";
 import { Link } from "react-router-dom";
 import './NavBar.css';
 
-//import { useStorePersist } from "store/context";
-
 const NavBar = () => {
-    /*const [{
-        carritoProductos,  // El listado de las unidades
-    }, dispatchPersist] = useStorePersist();
-
-    useEffect(() => {
-        dispatchPersist({
-            type: 'setCarritoProductos',
-            payload: ['Prueba otra', 'Prueba mas']
-        });
-    }, [])*/
 
     return (
         <nav className="nav">
@@ -38,7 +26,7 @@ const NavBar = () => {
                     <Link to ={'/Nosotros'}>Nosotros</Link>
                 </li>
                 <li>
-                    <Link to={'/RouteCart'}><CartWidget /></Link>
+                    <Link to={'/Cart'}><CartWidget /></Link>
                 </li>
             </ul>
         </nav>

@@ -1,0 +1,13 @@
+img.ItemDetail {
+    height: 300px;
+    width: auto;
+}
+
+.fondo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 44px;
+}

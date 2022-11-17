@@ -9,23 +9,24 @@ const ItemListContainer = ({ categoryId }) => {
     useEffect(() => {
         const db = getFirestore();
         const itemsCollection = collection(db, 'items');
+        let itemFilter;
 
-        if (categoryId) {
-            const itemFilter = query(itemsCollection, where("categoria", "==", categoryId));
-            getDocs(itemFilter).then((res) =>
-                setData(res.docs.map((item =>
-                    (item.data())))))
-        } else {
-            getDocs(itemsCollection).then((res) =>
-                setData(res.docs.map((item =>
-                    (item.data())))))
-        }
+        categoryId ?
+            itemFilter = query(itemsCollection, where("categoria", "==", categoryId))
+            : itemFilter = query(itemsCollection);
 
+        getDocs(itemFilter).then((snapshot) => {
+            const arrproducts = snapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data(),
+            }));
+            setData(arrproducts);
+        });
     }, [categoryId]);
 
-return (
+    return (
         <div>
-            <ItemList data={data} />
+            <ItemList key={Math.random()} data={data} />
         </div>
     )
 }
