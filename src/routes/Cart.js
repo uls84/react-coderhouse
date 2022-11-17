@@ -16,10 +16,11 @@ const Cart = () => {
                 :
                 <div>
                     <>
-                        {cart.map((product) => (<ItemCart key={product.id} product={product} />))}
+                        {cart.map((product) => (<ItemCart key={product.id} item={product} />))}
                         <div className='product'><p>Cantidad de productos: {totalProducts()}</p>
                             <p>total: {totalPrice()} pesos</p></div>
-                        <Link to='/checkout'><button>Comprobante</button></Link>
+                        <Link to='/'><button>Seguir comprando</button></Link>
+                        <Link to='/checkout'><button>Finalizar compra</button></Link>
                     </>
                 </div>
             }

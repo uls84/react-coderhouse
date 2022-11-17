@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
 const ItemList = ( {data = []}) => {
-    console.log(data);
     return(
         <Container fluid="md">
             <Row>

@@ -11,7 +11,7 @@ const CartProvider = ({ children }) => {
     const addProduct = (item, stock) => {
         if (isInCart(item.id)) {
             setCart(cart.map(product => {
-                return product.id === item.id ? { ...product, stock: product.stock + stock }
+                return (product.id === item.id) && (product.stock - item.stock > stock && product.stock > 0) ? { ...product, stock: product.stock + stock }
                 : product;
             }));
         } else {
@@ -24,7 +24,7 @@ const CartProvider = ({ children }) => {
     }
 
     const totalProducts = () => {
-        cart.reduce((acumulador, productoActual) => acumulador + productoActual.stock, 0);
+       return cart.reduce((acumulador, productoActual) => acumulador + productoActual.stock, 0);
     }
 
     const clearCart = () => setCart([]);

@@ -13,8 +13,6 @@ const ItemDetail = ({ item }) => {
     const onAdd = (stock) => {
         setGoToCart(true);
         addProduct(item, stock);
-        console.log(stock);
-        console.log(item);
     }
 
     return (
@@ -28,9 +26,10 @@ const ItemDetail = ({ item }) => {
                     <p>Estilo: {item.estilo}</p>
                     <p>Categoria: {item.categoria}</p>
                     <p>Id: {item.id}</p>
+                    <p>Stock del producto: {item.stock}</p>
                     {
                         goToCart
-                            ? <Link to='/Cart'><Button variant="outline-success">Terminar compra</Button> </Link>
+                            ? <Link to='/Cart'><Button variant="outline-success">Ver carrito</Button> </Link>
                             : <Contador initial={1} stock={item.stock} onAdd={onAdd} />
                     }
                 </div>
