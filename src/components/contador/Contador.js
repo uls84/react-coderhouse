@@ -22,7 +22,7 @@ const Contador = ({ initial, stock, onAdd }) => {
             <span>{cont}</span>
             <button disabled={cont >= stock} onClick={Sumar}>+</button>
             <div>
-                <button disabled={stock <= 0} onClick={() => onAdd(Contador)} >Agregar al carrito</button>
+                <button disabled={stock <= 0} onClick={() => onAdd(cont)} >Agregar al carrito</button>
             </div>
 
         </div>

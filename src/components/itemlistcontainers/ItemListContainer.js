@@ -26,7 +26,7 @@ const ItemListContainer = ({ categoryId }) => {
 
     return (
         <div>
-            <ItemList key={Math.random()} data={data} />
+            <ItemList key={data.id} data={data} />
         </div>
     )
 }

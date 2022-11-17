@@ -11,14 +11,14 @@ const Cart = () => {
             {cart.length === 0 ?
                 <>
                     <p>No hay elementos en el carrito</p>
-                    <Link to='/'><button>Hacer compras</button></Link>
+                    <Link to='/'><button>Ir a comprar</button></Link>
                 </>
                 :
                 <div>
                     <>
                         {cart.map((product) => (<ItemCart key={product.id} product={product} />))}
                         <div className='product'><p>Cantidad de productos: {totalProducts()}</p>
-                            <p>total: {totalPrice()}</p></div>
+                            <p>total: {totalPrice()} pesos</p></div>
                         <Link to='/checkout'><button>Comprobante</button></Link>
                     </>
                 </div>

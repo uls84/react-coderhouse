@@ -9,7 +9,7 @@ import Category from './routes/Category';
 import Nosotros from './routes/Nosotros';
 import ItemDetailContainer from './components/itemlistcontainers/ItemDetailContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CartProvider from 'context/CartContext';
+import {CartProvider} from 'context/CartContext';
 import CheckOut from './components/checkout/CheckOut';
 import Cart from './routes/Cart';
 
