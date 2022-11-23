@@ -1,0 +1,25 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.ItemDetalle {
+    width: 250px;
+    height: 400px;
+    margin-top: 2rem;
+
+}
+
+.text {
+    font-size: 2rem;
+    font-weight: 500;
+    color: whitesmoke;
+    font-style: oblique;
+    text-decoration: underline;
+}
+
+button.btn.btn-outline-success {
+    margin-top: 25px;
+}

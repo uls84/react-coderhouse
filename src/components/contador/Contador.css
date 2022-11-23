@@ -1,0 +1,7 @@
+.Count {
+    width: fit-content;
+    margin: auto;
+    padding: 1rem;
+    background-color: rgb(224, 203, 83);
+    text-align: center;
+}
